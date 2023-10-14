@@ -1,5 +1,4 @@
 clear all
-close all
 %% read wavs
 [mix,fs] = audioread("data/1observation.wav");
 [source,fs] = audioread('data/1source.wav');
