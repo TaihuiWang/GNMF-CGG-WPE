@@ -3,6 +3,7 @@ close all
 %% read wavs
 [mix,fs] = audioread("data/1observation.wav");
 [source,fs] = audioread('data/1source.wav');
+
 %% stft
 windowSize=32;
 shiftCof=0.5;
@@ -23,10 +24,8 @@ delta = 1; % prediction delay
 %% perform dereverberation
 seed=1; 
 RandStream.setGlobalStream(RandStream('mt19937ar','Seed',seed));
-
 [drb] = WPECGGNMF(mix(:,1:4), nb, L, delta, fftSize, shiftSize, it,itNMF, beta,p,refMic);
 drb = drb(:,refMic);
-
 audiowrite('data/dereverberatedSignal.wav',drb,fsResample);
 
 
