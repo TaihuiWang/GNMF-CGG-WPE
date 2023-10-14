@@ -1,7 +1,5 @@
 clear all
 close all
-%% add tools for the evaluation
-addpath('./obj_evaluation')
 %% read wavs
 [mix,fs] = audioread("data/1observation.wav");
 [source,fs] = audioread('data/1source.wav');
@@ -30,9 +28,7 @@ RandStream.setGlobalStream(RandStream('mt19937ar','Seed',seed));
 drb = drb(:,refMic);
 
 audiowrite('data/dereverberatedSignal.wav',drb,fsResample);
-%% evaluation
-pesqBefore = pesq1(mix(:,1),fsResample,source)
-pesqAfter = pesq1(drb,fsResample,source)
+
 
 
 
