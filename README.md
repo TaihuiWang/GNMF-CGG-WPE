@@ -3,5 +3,5 @@ This matlab code is an implementation of out recently proposed GNMF-CGG-WPE algo
 
 The dictionary "realRecordingData" contains the recorded and dereverberated speech signals, where the reverberant speech signal is recored in a highly reverberant room with two glass walls, as shown in the following figure.
 
-![Uploading image.png…]()
+![Uploading image.png…](https://github.com/TaihuiWang/GNMF-CGG-WPE/blob/main/recordingCondition.png)
 
